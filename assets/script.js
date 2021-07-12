@@ -20,7 +20,7 @@ var sym = '!#$%&*()=-+/{}';
 
 function generatePassword() {
     //Initial Prompt for password length when button clicked
-    let passwordLength = window.prompt('Please chose the length of your password between 8 and 128 characters.');
+    let passwordLength = window.prompt("How long would your like your password to be? Pick a number, any number... Well any number between 8 and 128. (I'm not THAT magical.)");
     
     //User defined password lenght defined
     passwordLength = parseInt(passwordLength);
@@ -29,23 +29,23 @@ function generatePassword() {
     if(passwordLength >= 8 && passwordLength <= 128) {
         console.log(passwordLength);
     } else {
-        alert('Password must be at least 8 characters and no more than 128 characters.');
+        alert("Inconceivable! The password must be a number between 8 and 128.");
         return '';
     }
 
-    let passLower = window.confirm('Would you like to use Lower Case characters?');
+    let passLower = window.confirm("Would you like to use Lower Case characters? Choose 'OK' for 'Yes' & 'Cancel' for 'No'.");
 
     console.log(passLower);
 
-    let passUpper = window.confirm('Would you like your password to include Upper Case characters?');
+    let passUpper = window.confirm("Would you like your password to include Upper Case characters? Choose 'OK' for 'Yes' & 'Cancel' for 'No'.");
 
     console.log(passUpper);
 
-    let passNum = window.confirm('Would you like to use Numbers in your password?');
+    let passNum = window.confirm("Would you like to use Numbers in your password? Choose 'OK' for 'Yes' & 'Cancel' for 'No'.");
 
     console.log(passNum);
 
-    let passSym = window.confirm('Would you like to have any Special characters in your password?');
+    let passSym = window.confirm("Would you like to have any Special characters in your password? Choose 'OK' for 'Yes' & 'Cancel' for 'No'.");
 
     console.log(passSym);
 
@@ -55,9 +55,6 @@ function generatePassword() {
     }
     
     var possChar = '';
-
-    console.log(lower)
-    console.log(typeof lower)
 
     if(passLower) {
         possChar = possChar.concat(lower);
