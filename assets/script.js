@@ -12,17 +12,15 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Created Variabkes for password creation
 var lower = 'abcdefghijkmnopqrstuvwxyz';
 var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var num = '0123456789';
 var sym = '!#$%&*()=-+/{}';
 
 function generatePassword() {
-    //Initial Prompt for password length when button clicked
+
     let passwordLength = window.prompt("How long would your like your password to be? Pick a number, any number... Well any number between 8 and 128. (I'm not THAT magical.)");
     
-    //User defined password lenght defined
     passwordLength = parseInt(passwordLength);
     console.log(typeof passwordLength);
 
